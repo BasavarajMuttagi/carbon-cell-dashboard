@@ -1,11 +1,11 @@
-import BitCoinPrice from "./BitCoinPrice";
-import PopulationChart from "./PopulationChart";
-import TodaysMarket from "./TodaysMarket";
-import WalletBalance from "./WalletBalanceCard";
+import BitCoinPrice from "../components/BitCoinPrice";
+import PopulationChart from "../components/PopulationChart";
+import TodaysMarket from "../components/TodaysMarket";
+import WalletBalance from "../components/WalletBalanceCard";
 
-function DashBoardContent() {
+function HomeLayout() {
   return (
-    <div className="relative h-full w-full bg-dark-tertiary space-y-5 overflow-y-scroll">
+    <>
       <div className="flex justify-between items-center p-5">
         <div className="space-y-2">
           <div className="text-base font-extrabold sm:text-2xl">
@@ -33,13 +33,13 @@ function DashBoardContent() {
           <TodaysMarket />
           <BitCoinPrice />
         </div>
-        <div className="space-y-4 h-full w-full sm:flex sm:justify-between sm:items-center sm:space-y-0">
+        <div className=" space-y-4 h-full w-full sm:flex sm:justify-between sm:items-center sm:space-y-0">
           <WalletBalance />
           <PopulationChart />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
-export default DashBoardContent;
+export default HomeLayout;

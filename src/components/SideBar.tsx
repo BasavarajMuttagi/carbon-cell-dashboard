@@ -1,4 +1,5 @@
 import {
+  ArrowFatLinesLeft,
   ArrowsDownUp,
   Bell,
   BuildingOffice,
@@ -12,18 +13,25 @@ import {
   X,
 } from "@phosphor-icons/react";
 import { RefObject } from "react";
+import { Link, NavLink } from "react-router-dom";
 
-function SideBar({ commonRef }: { commonRef: RefObject<HTMLDivElement> }) {
+function SideBar({
+  commonRef,
+  hideSideTab,
+}: {
+  commonRef: RefObject<HTMLDivElement>;
+  hideSideTab: () => void;
+}) {
   return (
-    <div
-      className="flex flex-col justify-between  bg-dark-secondary text-ash-secondary text-sm p-2 text-[20px] font-semibold pb-5 w-full h-full  max-w-full"
-    >
+    <div className="flex flex-col justify-between  bg-dark-secondary text-ash-secondary text-sm p-2 text-[20px] font-semibold pb-5 w-full h-full  max-w-full">
       <div className="flex justify-between items-center px-4 py-2">
-        <img
-          src={"src/assets/logo.png"}
-          alt="logo"
-          className="w-24 cursor-pointer hidden sm:block"
-        />
+        <Link to={"/"}>
+          <img
+            src={"src/assets/logo.png"}
+            alt="logo"
+            className="w-24 cursor-pointer hidden sm:block"
+          />
+        </Link>
         <List
           size={40}
           alt="hamburger-icon"
@@ -34,46 +42,174 @@ function SideBar({ commonRef }: { commonRef: RefObject<HTMLDivElement> }) {
           className="cursor-pointer sm:hidden"
           onClick={() => commonRef.current?.blur()}
         />
+        <ArrowFatLinesLeft
+          size={32}
+          weight="fill"
+          className="text-yellow-300 cursor-pointer hidden sm:block"
+          onClick={() => hideSideTab()}
+        />
       </div>
       <ul className="space-y-6 px-5 tracking-wider">
-        <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
-          <House size={24} />
-          <span>Home</span>
+        <li>
+          <NavLink
+            to={"/"}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#2563eb",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
+              <House size={24} />
+              <span>Home</span>
+            </li>
+          </NavLink>
         </li>
-        <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
-          <BuildingOffice size={24} />
-          <span>Organization</span>
+        <li>
+          <NavLink
+            to={"/orgs"}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#2563eb",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
+              <BuildingOffice size={24} />
+              <span>Organization</span>
+            </li>
+          </NavLink>
         </li>
-        <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
-          <Cube size={24} />
-          <span>Assets</span>
+        <li>
+          <NavLink
+            to={"/assets"}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#2563eb",
+                  }
+                : { color: "" }
+            }
+          >
+            <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
+              <Cube size={24} />
+              <span>Assets</span>
+            </li>
+          </NavLink>
         </li>
-        <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
-          <ArrowsDownUp size={24} />
-          <span>Trade</span>
+        <li>
+          <NavLink
+            to={"/trade"}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#2563eb",
+                  }
+                : { color: "" }
+            }
+          >
+            <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
+              <ArrowsDownUp size={24} />
+              <span>Trade</span>
+            </li>
+          </NavLink>
         </li>
-        <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
-          <HourglassLow size={24} />
-          <span>History</span>
+        <li>
+          <NavLink
+            to={"/history"}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#2563eb",
+                  }
+                : { color: "" }
+            }
+          >
+            <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
+              <HourglassLow size={24} />
+              <span>History</span>
+            </li>
+          </NavLink>
         </li>
-        <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
-          <Wallet size={24} />
-          <span>Wallet</span>
+        <li>
+          <NavLink
+            to={"/wallet"}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#2563eb",
+                  }
+                : { color: "" }
+            }
+          >
+            <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
+              <Wallet size={24} />
+              <span>Wallet</span>
+            </li>
+          </NavLink>
         </li>
       </ul>
 
       <ul className="space-y-6 px-5 tracking-wider">
-        <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
-          <Bell size={24} />
-          <span>Notifications</span>
+        <li>
+          <NavLink
+            to={"/notifications"}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#2563eb",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
+              <Bell size={24} />
+              <span>Notifications</span>
+            </li>
+          </NavLink>
         </li>
-        <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
-          <Question size={24} />
-          <span>Support</span>
+        <li>
+          <NavLink
+            to={"/support"}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#2563eb",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
+              <Question size={24} />
+              <span>Support</span>
+            </li>
+          </NavLink>
         </li>
-        <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
-          <Gear size={24} />
-          <span>Settings</span>
+        <li>
+          <NavLink
+            to={"/settings"}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "#2563eb",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <li className="flex items-center space-x-4  rounded cursor-pointer hover:text-indicator-primary">
+              <Gear size={24} />
+              <span>Settings</span>
+            </li>
+          </NavLink>
         </li>
       </ul>
 
