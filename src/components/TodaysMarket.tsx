@@ -2,7 +2,7 @@ import { ArrowDown, ArrowUp } from "@phosphor-icons/react";
 
 function TodaysMarket() {
   return (
-    <div className="p-5 space-y-4 bg-dark-secondary rounded-xl w-full drop-shadow-lg border border-ash-primary/10">
+    <div className="p-5 space-y-4 bg-dark-secondary rounded-xl w-full drop-shadow-lg border border-ash-primary/10 hover:scale-[102%] duration-100">
       <div className="text-white text-xl font-semibold">Today's Market</div>
       <div className="text-ash-primary space-y-4 font-medium">
         <div className="flex items-center justify-between">
