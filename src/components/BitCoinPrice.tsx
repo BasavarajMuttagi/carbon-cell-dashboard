@@ -25,7 +25,7 @@ export default function BitCoinPrice() {
       <div className="w-full">
         <Card
           style={{ backgroundColor: "#1A1C22" }}
-          className="space-y-3 rounded-xl hover:scale-[102%] duration-100"
+          className="space-y-3 rounded-xl hover:scale-[102%] duration-300"
         >
           <h3 className="flex items-center space-x-2  text-lg font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
             <img src={bitcoin} alt="bitcoin icon" className="h-8" />

@@ -27,7 +27,7 @@ function PopulationChart() {
   }, []);
 
   return (
-    <div className="hover:scale-[102%] duration-100 w-full border border-ash-primary/10 bg-dark-secondary rounded-xl p-2 sm:p-5">
+    <div className="hover:scale-[102%] duration-300 w-full border border-ash-primary/10 bg-dark-secondary rounded-xl p-2 sm:p-5">
       <TabGroup className="mt-6">
         <TabList>
           <Tab>India</Tab>
