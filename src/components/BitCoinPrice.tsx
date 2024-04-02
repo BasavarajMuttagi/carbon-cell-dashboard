@@ -5,7 +5,7 @@ import Skeleton from "react-loading-skeleton";
 import getSymbolFromCurrency from "@dcspark/currency-symbol-map";
 import { Card } from "@tremor/react";
 import { CountUp } from "use-count-up";
-
+import bitcoin from "../assets/Bitcoin.png";
 export default function BitCoinPrice() {
   const [Price, setPrice] = useState<CurrencyData>();
   const getPriceData = async () => {
@@ -28,11 +28,7 @@ export default function BitCoinPrice() {
           className="space-y-3 rounded-xl"
         >
           <h3 className="flex items-center space-x-2  text-lg font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
-            <img
-              src="../src/assets/Bitcoin.png"
-              alt="bitcoin icon"
-              className="h-8"
-            />
+            <img src={bitcoin} alt="bitcoin icon" className="h-8" />
             <span>Bitcoin</span>
           </h3>
           <div>
@@ -55,11 +51,7 @@ export default function BitCoinPrice() {
           className="space-y-3 rounded-xl"
         >
           <h3 className="flex items-center space-x-2  text-lg font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
-            <img
-              src="../src/assets/Bitcoin.png"
-              alt="bitcoin icon"
-              className="h-8"
-            />
+            <img src={bitcoin} alt="bitcoin icon" className="h-8" />
             <span>Bitcoin</span>
           </h3>
           <div className="flex items-center justify-between">
@@ -98,7 +90,7 @@ export default function BitCoinPrice() {
               )) || <Skeleton baseColor="#282C35" className="w-36" />}
             </div>
           </div>
-          <div className="flex items-center justify-between"> 
+          <div className="flex items-center justify-between">
             <p className="text-tremor-default font-medium text-tremor-content dark:text-dark-tremor-content">
               {Price?.GBP.code}
             </p>

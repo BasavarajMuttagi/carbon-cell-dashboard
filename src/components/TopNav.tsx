@@ -1,13 +1,13 @@
 import { List } from "@phosphor-icons/react";
 import { RefObject } from "react";
 import { Link } from "react-router-dom";
-
+import logo from "../assets/logo.png";
 function TopNav({ commonRef }: { commonRef: RefObject<HTMLDivElement> }) {
   return (
     <nav className="bg-dark-secondary flex justify-between items-center h-[75px] px-5 w-full sm:hidden">
       <Link to={"/"}>
         <img
-          src={"src/assets/logo.png"}
+          src={logo}
           alt="logo"
           className="w-24 cursor-pointer"
         />

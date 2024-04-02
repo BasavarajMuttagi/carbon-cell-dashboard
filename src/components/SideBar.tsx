@@ -14,6 +14,9 @@ import {
 } from "@phosphor-icons/react";
 import { RefObject } from "react";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
+import avatar from "../assets/avatar.png";
+
 
 function SideBar({
   commonRef,
@@ -27,7 +30,7 @@ function SideBar({
       <div className="flex justify-between items-center px-4 py-2">
         <Link to={"/"}>
           <img
-            src={"src/assets/logo.png"}
+            src={logo}
             alt="logo"
             className="w-24 cursor-pointer hidden sm:block"
           />
@@ -215,7 +218,7 @@ function SideBar({
 
       <div className="h-20 w-full rounded flex items-center space-x-3 px-3  bg-ash-secondary/20">
         <img
-          src={"src/assets/avatar.png"}
+          src={avatar}
           alt="avatar"
           className="w-14 h-14 rounded-[14rem]"
         />
