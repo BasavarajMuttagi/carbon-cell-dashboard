@@ -20,32 +20,9 @@ export default function BitCoinPrice() {
     getPriceData();
   }, []);
 
-  if (!Price?.USD) {
-    return (
-      <div className="w-full">
-        <Card
-          style={{ backgroundColor: "#1A1C22" }}
-          className="space-y-3 rounded-xl"
-        >
-          <h3 className="flex items-center space-x-2  text-lg font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
-            <img src={bitcoin} alt="bitcoin icon" className="h-8" />
-            <span>Bitcoin</span>
-          </h3>
-          <div>
-            <p className="text-tremor-default font-medium text-tremor-content dark:text-dark-tremor-content">
-              <Skeleton baseColor="#282C35" className="w-10" />
-            </p>
-            <div className="mt-2 flex items-baseline space-x-2.5">
-              <Skeleton baseColor="#282C35" className="w-36" />
-            </div>
-          </div>
-        </Card>
-      </div>
-    );
-  }
   return (
     <>
-      <div className=" max-w-sm w-full  shrink-0">
+      <div className="w-full">
         <Card
           style={{ backgroundColor: "#1A1C22" }}
           className="space-y-3 rounded-xl"

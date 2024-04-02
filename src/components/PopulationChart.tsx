@@ -27,7 +27,7 @@ function PopulationChart() {
   }, []);
 
   return (
-    <div className="max-w-sm  w-full bg-dark-secondary rounded-xl p-2 sm:p-5 sm:max-w-[700px] sm:w-full">
+    <div className="w-full bg-dark-secondary rounded-xl p-2 sm:p-5">
       <TabGroup className="mt-6">
         <TabList>
           <Tab>India</Tab>

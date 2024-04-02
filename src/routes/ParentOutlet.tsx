@@ -32,7 +32,7 @@ function ParentOutlet() {
           />
         </div>
       )}
-      <div className="relative h-full w-full bg-dark-tertiary space-y-5 overflow-y-scroll">
+      <div className="relative h-full w-full bg-dark-primary space-y-5 overflow-y-scroll">
         <Outlet />
       </div>
     </div>

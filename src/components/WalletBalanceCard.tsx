@@ -41,7 +41,7 @@ export default function WalletBalance() {
     <>
       <Card
         style={{ backgroundColor: "#1A1C22" }}
-        className="max-w-md w-full flex-1 rounded-xl py-10"
+        className="w-full flex-1 rounded-xl py-10"
       >
         <h3 className="text-xl  font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
           Wallet Balance

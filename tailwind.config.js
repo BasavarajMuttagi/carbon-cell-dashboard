@@ -53,7 +53,7 @@ const config = {
         },
 
         indicator: {
-          primary: "#1FCB4F",
+          primary: "#2BB62B",
           secondary: "#FFC01E",
           tertiary: "#F46D22",
         },
