@@ -26,7 +26,7 @@ function SideBar({
   hideSideTab: () => void;
 }) {
   return (
-    <div className="flex flex-col justify-between  bg-dark-secondary text-ash-secondary text-sm p-2 text-[20px] font-semibold pb-5 w-full h-full  max-w-full">
+    <div className="flex flex-col justify-between border border-ash-primary/10  bg-dark-secondary text-ash-secondary text-sm p-2 text-[20px] font-semibold pb-5 w-full h-full  max-w-full">
       <div className="flex justify-between items-center px-4 py-2">
         <Link to={"/"}>
           <img

@@ -9,7 +9,7 @@ function BlogCard({
   Content: string;
 }) {
   return (
-    <div className="max-w-md w-full rounded-xl bg-dark-secondary p-3 space-y-2 h-[550px] flex flex-col justify-between">
+    <div className="border border-ash-primary/10 max-w-md w-full rounded-xl bg-dark-secondary p-3 space-y-2 h-[550px] flex flex-col justify-between">
       <img
         src={imageUrl}
         alt="supporting img"

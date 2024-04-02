@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 function TopNav({ commonRef }: { commonRef: RefObject<HTMLDivElement> }) {
   return (
-    <nav className="bg-dark-secondary flex justify-between items-center h-[75px] px-5 w-full sm:hidden">
+    <nav className="bg-dark-secondary border-b border-ash-primary/10 flex justify-between items-center h-[75px] px-5 w-full sm:hidden">
       <Link to={"/"}>
         <img
           src={logo}
